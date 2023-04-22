@@ -71,7 +71,7 @@
     <repository>
         <id>central</id>
         <name>Java-Spring-boot-app</name>
-        <url>http://54.225.132.57:8081/repository/Java-Spring-boot-app</url>
+        <url>http://52.204.148.195:8081/repository/Java-Spring-boot-app</url>
     </repository>
 </distributionManagement>
 </project>
