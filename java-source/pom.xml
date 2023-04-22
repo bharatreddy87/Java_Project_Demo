@@ -70,8 +70,8 @@
 <distributionManagement>
     <repository>
         <id>central</id>
-        <name>iwayq-libs-release-local</name>
-        <url>http://18.207.136.250:8082/artifactory/iwayq-libs-release-local</url>
+        <name>Java-Spring-boot-app</name>
+        <url>http://54.225.132.57:8081/repository/Java-Spring-boot-app</url>
     </repository>
 </distributionManagement>
 </project>
