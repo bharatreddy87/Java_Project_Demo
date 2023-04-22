@@ -9,7 +9,7 @@ pipeline {
 
       stage ('Checkout SCM'){
         steps {
-          checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://iwayqtech@bitbucket.org/iwayqtech/devops-pipeline-project.git']]])
+          checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/bharatreddy87/Java_Project_Demo.git']]])
         }
       }
 	  
@@ -17,8 +17,11 @@ pipeline {
 	      steps {
           
             dir('java-source'){
-            sh "mvn package"
-          }
+		    sh "mvn clean"
+		    sh "mvn compile"
+		    sh "mvn test"
+		    sh "mvn package"
+	          }
         }
          
       }
