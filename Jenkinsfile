@@ -2,8 +2,8 @@ pipeline {
   agent any
 	parameters{
 		string(name:'Deploy_Env', defaultValue: 'Production', description:'Production Enveronment')
-		boolParam(name:'PROD', defaultValue: true, description: 'prod env')
-		choice(name:'branches', choices:['main','stage','qa','dev'], desctiption:'need to selete the deployable branch')
+		booleanParam(name:'PROD', defaultValue: true, description: 'prod env')
+		choice(name:'branches', choices:['main','stage','qa','dev'], description:'need to selete the deployable branch')
 		file(name:'codefiles', description: 'production files')
 		password(name:'prodpasswd', defaultValue:'Hanuman@3', description:'password for prod login')	
 	
