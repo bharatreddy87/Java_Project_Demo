@@ -8,8 +8,9 @@ pipeline {
 		password(name:'prodpasswd', defaultValue:'Hanuman@3', description:'password for prod login')
 	}
 	options{
-		buildDiscarder(logRotator((numToKeepStr: '2'))
-		disableConcurrentBuilds()	
+		buildDiscarder(logRotator(numToKeepStr: '5')) 
+		disableConcurrentBuilds()
+		timeout(time: 5, unit: 'SECONDS') 
 	}
 	
     stages {
