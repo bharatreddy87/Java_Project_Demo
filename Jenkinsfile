@@ -8,11 +8,6 @@ pipeline {
 		password(name:'prodpasswd', defaultValue:'Hanuman@3', description:'password for prod login')	
 	
 	}
-  tools {
-  
-  maven 'maven'
-   
-  }
 	
     stages {
 
