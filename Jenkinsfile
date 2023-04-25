@@ -5,8 +5,11 @@ pipeline {
 		booleanParam(name:'PROD', defaultValue: true, description: 'prod env')
 		choice(name:'branches', choices:['main','stage','qa','dev'], description:'need to selete the deployable branch')
 		file(name:'codefiles', description: 'production files')
-		password(name:'prodpasswd', defaultValue:'Hanuman@3', description:'password for prod login')	
-	
+		password(name:'prodpasswd', defaultValue:'Hanuman@3', description:'password for prod login')
+	}
+	options{
+		buildDiscarder(logRotator(numToKeepStr:1))
+		disableConcurrentBuilds()	
 	}
 	
     stages {
